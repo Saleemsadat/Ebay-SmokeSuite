@@ -6,12 +6,12 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/Resources/Features/AddDeleteEmployee.feature",
+        features = "src/test/Resources/Features/ebaylogin.feature",
         glue = "Steps",
         dryRun = false,
-        monochrome = true,
+        monochrome = true
 
-        tags = ""
+
 
 
 )

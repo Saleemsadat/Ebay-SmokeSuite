@@ -1,0 +1,6 @@
+Getting nullPointer Exception when trying to get text from ebay and it could be due to incorrect locater in the "EbayLoginPage"
+
+Creating object of EbayLogin Page in the top in the StepsEbayLoin page, will throw null pointer exception. We have to declare under each step seperately. Find out
+why. As this is not clean coding.
+
+

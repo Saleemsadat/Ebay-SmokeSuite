@@ -1,12 +1,9 @@
 package Utils;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-import java.util.List;
 
 public class CommonMethods {
 
@@ -44,23 +41,29 @@ This method is to set up browser
         element.click();
     }
 
+    /*
+    This method is to get text for verification
+     */
+
+    public static String getText(WebElement element){
+
+        String text=element.getText();
+        System.out.println(text);
+        return text;
+
+    }
 
     /*
-    This method is to dynamically identify Novak
-    */
-    public static void Dynamictable(List<WebElement> element, String expectedtext)  {
-        for (int i = 1; i <= element.size(); i++) {
+    This method is to make assertion
+     */
 
-            String Actualtext = element.get(i-1).getText();
-            System.out.println("Actualtext: " + Actualtext);
-            if (Actualtext.contains(expectedtext)) {
+    public static void makeAssertion(){
 
-                driver.findElement(By.xpath("//table[@class='smart-table table table-striped']//tbody//tr[" + i + "]//td[last()]//button")).click();
 
-                break;
-            }
-        }
+
+
     }
+
 
     public static void tearDown(){
         driver.close();
